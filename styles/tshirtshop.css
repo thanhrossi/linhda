@@ -1,0 +1,3 @@
+.card .table.product-detail-admin tbody td:last-child {
+    display: block;
+}
