@@ -1,7 +1,7 @@
 {* admin_login.tpl *}
 {load_presentation_object filename="admin_login" assign="obj"}
 <div class="login">
-  <p class="login-title">TShirtShop Login</p>
+  <p class="login-title">Login</p>
   <form method="post" action="{$obj->mLinkToAdmin}">
     <p>
       Enter login information or go back to
