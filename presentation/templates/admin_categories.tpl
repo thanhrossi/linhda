@@ -10,7 +10,7 @@
 {if $obj->mCategoriesCount eq 0}
   <p class="no-items-found">There are no categories in this department!</p>
 {else}
-  <table class="table table-hover">
+  <div class="table-responsive"><table class="table table-hover">
     <tr>
       <th width="200">Category Name</th>
       <th>Category Description</th>
@@ -67,7 +67,7 @@
     </tr>
     {/if}
   {/section}
-  </table>
+  </table></div>
 {/if}
   <h3>Add new category:</h3>
   <div  class="row" style="width: 700px;">

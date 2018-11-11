@@ -7,7 +7,7 @@
 {if $obj->mDepartmentsCount eq 0}
   <p class="no-items-found">There are no departments in your database!</p>
 {else}
-  <table class="table table-hover">
+  <div class="table-responsive"><table class="table table-hover">
     <tr>
       <th width="200">Department Name</th>
       <th>Department Description</th>
@@ -65,6 +65,7 @@
     {/if}
   {/section}
   </table>
+  </div>
 {/if}
   <h3>Add new department:</h3>
   

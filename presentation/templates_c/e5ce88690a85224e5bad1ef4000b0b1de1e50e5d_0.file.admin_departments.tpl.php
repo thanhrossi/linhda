@@ -1,18 +1,18 @@
 <?php
-/* Smarty version 3.1.32, created on 2018-11-11 13:07:15
+/* Smarty version 3.1.32, created on 2018-11-11 14:37:28
   from 'C:\Program Files (x86)\Ampps\www\sushikai\presentation\templates\admin_departments.tpl' */
 
 /* @var Smarty_Internal_Template $_smarty_tpl */
 if ($_smarty_tpl->_decodeProperties($_smarty_tpl, array (
   'version' => '3.1.32',
-  'unifunc' => 'content_5be82983cbf0c0_79924649',
+  'unifunc' => 'content_5be83ea8b18e90_13679721',
   'has_nocache_code' => false,
   'file_dependency' => 
   array (
     'e5ce88690a85224e5bad1ef4000b0b1de1e50e5d' => 
     array (
       0 => 'C:\\Program Files (x86)\\Ampps\\www\\sushikai\\presentation\\templates\\admin_departments.tpl',
-      1 => 1541941632,
+      1 => 1541947000,
       2 => 'file',
     ),
   ),
@@ -20,7 +20,7 @@ if ($_smarty_tpl->_decodeProperties($_smarty_tpl, array (
   array (
   ),
 ),false)) {
-function content_5be82983cbf0c0_79924649 (Smarty_Internal_Template $_smarty_tpl) {
+function content_5be83ea8b18e90_13679721 (Smarty_Internal_Template $_smarty_tpl) {
 $_smarty_tpl->_checkPlugins(array(0=>array('file'=>'C:\\ProgramFiles(x86)\\Ampps\\www\\sushikai\\presentation\\smarty_plugins\\function.load_presentation_object.php','function'=>'smarty_function_load_presentation_object',),));
 echo smarty_function_load_presentation_object(array('filename'=>"admin_departments",'assign'=>"obj"),$_smarty_tpl);?>
 
@@ -33,7 +33,7 @@ echo smarty_function_load_presentation_object(array('filename'=>"admin_departmen
 if ($_smarty_tpl->tpl_vars['obj']->value->mDepartmentsCount == 0) {?>
   <p class="no-items-found">There are no departments in your database!</p>
 <?php } else { ?>
-  <table class="table table-hover">
+  <div class="table-responsive"><table class="table table-hover">
     <tr>
       <th width="200">Department Name</th>
       <th>Department Description</th>
@@ -106,6 +106,7 @@ for ($__section_i_0_iteration = 1, $_smarty_tpl->tpl_vars['__smarty_section_i']-
 }
 ?>
   </table>
+  </div>
 <?php }?>
   <h3>Add new department:</h3>
   

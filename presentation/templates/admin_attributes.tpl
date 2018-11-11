@@ -9,7 +9,7 @@
     There are no products attributes in your database!
   </p>
 {else}
-  <table class="table table-hover table-striped">
+  <div class="table-responsive"><table class="table table-hover table-striped">
     <tr>
       <th>Attribute Name</th>
       <th width="240">&nbsp;</th>
@@ -55,7 +55,7 @@
     </tr>
     {/if}
   {/section}
-  </table>
+  </table></div>
 {/if}
   <h3>Add new attribute:</h3>
   <div class="row" style="width: 700px;">

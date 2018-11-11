@@ -11,7 +11,7 @@
 {if $obj->mProductsCount eq 0}
   <p class="no-items-found">There are no products in this category!</p>
 {else}
-  <table class="table table-hover">
+  <div class="table-responsive"><table class="table table-hover">
     <tr>
       <th>Name</th>
       <th>Description</th>
@@ -32,7 +32,7 @@
       </td>
     </tr>
   {/section}
-  </table>
+  </table></div>
 {/if}
   <h3>Add new product:</h3>
   <div class="row" style="width: 700px;">

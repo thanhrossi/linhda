@@ -10,7 +10,7 @@
 {if $obj->mAttributeValuesCount eq 0}
   <p class="no-items-found">There are no values for this attribute!</p>
 {else}
-  <table class="table table-hover">
+ <div class="table-responsive"><table class="table table-hover">
     <tr>
       <th>Attribute Value</th>
       <th width="170">&nbsp;</th>
@@ -49,7 +49,7 @@
     </tr>
     {/if}
   {/section}
-  </table>
+  </table></div>
 {/if}
   <h3>Add new attribute value:</h3>
   <div class="row" style="width: 700px;">

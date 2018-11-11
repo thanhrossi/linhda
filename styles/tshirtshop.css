@@ -1,3 +1,7 @@
 .card .table.product-detail-admin tbody td:last-child {
     display: block;
 }
+.cc .form-control {
+    width: auto;
+    display: inline-block;
+}

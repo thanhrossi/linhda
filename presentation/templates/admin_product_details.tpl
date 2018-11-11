@@ -9,7 +9,7 @@
       trở lại ...</a> ]
   </h4>
   {if $obj->mErrorMessage}<p class="error">{$obj->mErrorMessage}</p>{/if}
-  <table class="table table-hover product-detail-admin">
+  <div class="table-responsive"><table class="table table-hover product-detail-admin">
     <tbody>
       <tr class="row">
         <td valign="top" class="col-md-6 pr-1">
@@ -119,6 +119,7 @@
       </tr>
     </tbody>
   </table>
+  </div>
   <p>
     <font class="bold-text">Image name:</font> {$obj->mProduct.image}
     <input name="ImageUpload" type="file" value="Upload" />
