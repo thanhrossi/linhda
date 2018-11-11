@@ -1,18 +1,18 @@
 <?php
-/* Smarty version 3.1.32, created on 2018-11-11 13:37:39
+/* Smarty version 3.1.32, created on 2018-11-11 14:54:56
   from 'C:\Program Files (x86)\Ampps\www\sushikai\presentation\templates\admin_attributes.tpl' */
 
 /* @var Smarty_Internal_Template $_smarty_tpl */
 if ($_smarty_tpl->_decodeProperties($_smarty_tpl, array (
   'version' => '3.1.32',
-  'unifunc' => 'content_5be830a3066b03_45494450',
+  'unifunc' => 'content_5be842c04277c7_41520176',
   'has_nocache_code' => false,
   'file_dependency' => 
   array (
     '99cb93b3c1a779f46c800f9e6bfe1e11e5335e75' => 
     array (
       0 => 'C:\\Program Files (x86)\\Ampps\\www\\sushikai\\presentation\\templates\\admin_attributes.tpl',
-      1 => 1541943456,
+      1 => 1541947010,
       2 => 'file',
     ),
   ),
@@ -20,7 +20,7 @@ if ($_smarty_tpl->_decodeProperties($_smarty_tpl, array (
   array (
   ),
 ),false)) {
-function content_5be830a3066b03_45494450 (Smarty_Internal_Template $_smarty_tpl) {
+function content_5be842c04277c7_41520176 (Smarty_Internal_Template $_smarty_tpl) {
 $_smarty_tpl->_checkPlugins(array(0=>array('file'=>'C:\\ProgramFiles(x86)\\Ampps\\www\\sushikai\\presentation\\smarty_plugins\\function.load_presentation_object.php','function'=>'smarty_function_load_presentation_object',),));
 echo smarty_function_load_presentation_object(array('filename'=>"admin_attributes",'assign'=>"obj"),$_smarty_tpl);?>
 
@@ -35,7 +35,7 @@ if ($_smarty_tpl->tpl_vars['obj']->value->mAttributesCount == 0) {?>
     There are no products attributes in your database!
   </p>
 <?php } else { ?>
-  <table class="table table-hover table-striped">
+  <div class="table-responsive"><table class="table table-hover table-striped">
     <tr>
       <th>Attribute Name</th>
       <th width="240">&nbsp;</th>
@@ -97,7 +97,7 @@ for ($__section_i_0_iteration = 1, $_smarty_tpl->tpl_vars['__smarty_section_i']-
 }
 }
 ?>
-  </table>
+  </table></div>
 <?php }?>
   <h3>Add new attribute:</h3>
   <div class="row" style="width: 700px;">
