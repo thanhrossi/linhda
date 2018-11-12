@@ -19,7 +19,7 @@
     <tr>
       <td>
         <input type="text" name="name"
-         value="{$obj->mAttributes[i].name}" size="30" />
+         value="{$obj->mAttributes[i].name}" size="30" class="form-control" />
       </td>
       <td>
         <div class="btn-group" >

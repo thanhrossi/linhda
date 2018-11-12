@@ -1,18 +1,18 @@
 <?php
-/* Smarty version 3.1.32, created on 2018-11-11 14:45:38
+/* Smarty version 3.1.32, created on 2018-11-12 16:23:51
   from 'C:\Program Files (x86)\Ampps\www\sushikai\presentation\templates\admin_orders.tpl' */
 
 /* @var Smarty_Internal_Template $_smarty_tpl */
 if ($_smarty_tpl->_decodeProperties($_smarty_tpl, array (
   'version' => '3.1.32',
-  'unifunc' => 'content_5be84092cf2907_35832729',
+  'unifunc' => 'content_5be9a91787a8d6_15283303',
   'has_nocache_code' => false,
   'file_dependency' => 
   array (
     'f5b29a8bee34ff0803849af143dfa47fdc21ebb1' => 
     array (
       0 => 'C:\\Program Files (x86)\\Ampps\\www\\sushikai\\presentation\\templates\\admin_orders.tpl',
-      1 => 1541947537,
+      1 => 1542039829,
       2 => 'file',
     ),
   ),
@@ -20,7 +20,7 @@ if ($_smarty_tpl->_decodeProperties($_smarty_tpl, array (
   array (
   ),
 ),false)) {
-function content_5be84092cf2907_35832729 (Smarty_Internal_Template $_smarty_tpl) {
+function content_5be9a91787a8d6_15283303 (Smarty_Internal_Template $_smarty_tpl) {
 $_smarty_tpl->_checkPlugins(array(0=>array('file'=>'C:\\ProgramFiles(x86)\\Ampps\\www\\sushikai\\presentation\\smarty_plugins\\function.load_presentation_object.php','function'=>'smarty_function_load_presentation_object',),1=>array('file'=>'C:\\ProgramFiles(x86)\\Ampps\\www\\sushikai\\libs\\smarty\\plugins\\function.html_options.php','function'=>'smarty_function_html_options',),2=>array('file'=>'C:\\ProgramFiles(x86)\\Ampps\\www\\sushikai\\libs\\smarty\\plugins\\modifier.date_format.php','function'=>'smarty_modifier_date_format',),));
 echo smarty_function_load_presentation_object(array('filename'=>"admin_orders",'assign'=>"obj"),$_smarty_tpl);?>
 

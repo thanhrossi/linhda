@@ -1,18 +1,18 @@
 <?php
-/* Smarty version 3.1.32, created on 2018-11-11 13:14:01
+/* Smarty version 3.1.32, created on 2018-11-11 15:24:02
   from 'C:\Program Files (x86)\Ampps\www\sushikai\presentation\templates\admin_categories.tpl' */
 
 /* @var Smarty_Internal_Template $_smarty_tpl */
 if ($_smarty_tpl->_decodeProperties($_smarty_tpl, array (
   'version' => '3.1.32',
-  'unifunc' => 'content_5be82b19d08ee7_33079596',
+  'unifunc' => 'content_5be84992c5dcb4_14404826',
   'has_nocache_code' => false,
   'file_dependency' => 
   array (
     'ff9d61e385f5699985883316f0369cbe60a835cb' => 
     array (
       0 => 'C:\\Program Files (x86)\\Ampps\\www\\sushikai\\presentation\\templates\\admin_categories.tpl',
-      1 => 1541942038,
+      1 => 1541947036,
       2 => 'file',
     ),
   ),
@@ -20,7 +20,7 @@ if ($_smarty_tpl->_decodeProperties($_smarty_tpl, array (
   array (
   ),
 ),false)) {
-function content_5be82b19d08ee7_33079596 (Smarty_Internal_Template $_smarty_tpl) {
+function content_5be84992c5dcb4_14404826 (Smarty_Internal_Template $_smarty_tpl) {
 $_smarty_tpl->_checkPlugins(array(0=>array('file'=>'C:\\ProgramFiles(x86)\\Ampps\\www\\sushikai\\presentation\\smarty_plugins\\function.load_presentation_object.php','function'=>'smarty_function_load_presentation_object',),));
 echo smarty_function_load_presentation_object(array('filename'=>"admin_categories",'assign'=>"obj"),$_smarty_tpl);?>
 
@@ -38,7 +38,7 @@ echo smarty_function_load_presentation_object(array('filename'=>"admin_categorie
 if ($_smarty_tpl->tpl_vars['obj']->value->mCategoriesCount == 0) {?>
   <p class="no-items-found">There are no categories in this department!</p>
 <?php } else { ?>
-  <table class="table table-hover">
+  <div class="table-responsive"><table class="table table-hover">
     <tr>
       <th width="200">Category Name</th>
       <th>Category Description</th>
@@ -110,7 +110,7 @@ for ($__section_i_0_iteration = 1, $_smarty_tpl->tpl_vars['__smarty_section_i']-
 }
 }
 ?>
-  </table>
+  </table></div>
 <?php }?>
   <h3>Add new category:</h3>
   <div  class="row" style="width: 700px;">

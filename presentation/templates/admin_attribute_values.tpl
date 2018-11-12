@@ -20,16 +20,16 @@
     <tr>
       <td>
         <input type="text" name="value"
-         value="{$obj->mAttributeValues[i].value}" size="30" />
+         value="{$obj->mAttributeValues[i].value}" size="30" class="form-control" />
       </td>
       <td>
         <input type="submit"
          name="submit_update_val_{$obj->mAttributeValues[i].attribute_value_id}"
-         value="Update" />
-        <input type="submit" name="cancel" value="Cancel" />
+         value="Update" class="btn btn-primary" />
+        <input type="submit" name="cancel" value="Cancel"  class="btn btn-dark" />
         <input type="submit"
          name="submit_delete_val_{$obj->mAttributeValues[i].attribute_value_id}"
-         value="Delete" />
+         value="Delete"  class="btn btn-danger" />
       </td>
     </tr>
     {else}

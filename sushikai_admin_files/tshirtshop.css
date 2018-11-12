@@ -5,6 +5,3 @@
     width: auto;
     display: inline-block;
 }
-.card .table.borderless-tablez  tbody td:last-child {
-    display: block;
-}

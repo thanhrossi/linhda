@@ -1,15 +1,15 @@
 {* admin_order_details.tpl *}
 {load_presentation_object filename="admin_order_details" assign="obj"}
 <form method="get" action="{$obj->mLinkToAdmin}">
-  <h3>
+  <h4>
     Editing details for order ID:
     {$obj->mOrderInfo.order_id} [
     <a href="{$obj->mLinkToOrdersAdmin}">back to admin orders...</a> ]
-  </h3>
+  </h4>
   <input type="hidden" name="Page" value="OrderDetails" />
   <input type="hidden" name="OrderId"
    value="{$obj->mOrderInfo.order_id}" />
-  <table class="borderless-table">
+  <table class="table table-hover borderless-tablez">
     <tr>
       <td class="bold-text">Total Amount: </td>
       <td class="price">
@@ -39,7 +39,7 @@
     <tr>
       <td class="bold-text">Status: </td>
       <td>
-        <select name="status"
+        <select name="status" class="custom-select"
          {if ! $obj->mEditEnabled} disabled="disabled" {/if} >
           {html_options options=$obj->mOrderStatusOptions
            selected=$obj->mOrderInfo.status}
@@ -49,7 +49,7 @@
     <tr>
       <td class="bold-text">Authorization Code: </td>
       <td>
-        <input name="authCode" type="text" size="50"
+        <input name="authCode" type="text" class="form-control" size="50"
          value="{$obj->mOrderInfo.auth_code}"
          {if ! $obj->mEditEnabled} disabled="disabled" {/if} />
       <td>
@@ -57,7 +57,7 @@
     <tr>
       <td class="bold-text">Reference Number: </td>
       <td>
-        <input name="reference" type="text" size="50"
+        <input name="reference" class="form-control" type="text" size="50"
          value="{$obj->mOrderInfo.reference}"
          {if ! $obj->mEditEnabled} disabled="disabled" {/if} />
       <td>
@@ -65,7 +65,7 @@
     <tr>
       <td class="bold-text">Comments: </td>
       <td>
-        <input name="comments" type="text" size="50"
+        <input name="comments" class="form-control" type="text" size="50"
          value="{$obj->mOrderInfo.comments}"
          {if ! $obj->mEditEnabled} disabled="disabled" {/if} />
       <td>
@@ -93,19 +93,19 @@
     </tr>
   </table>
   <p>
-    <input type="submit" name="submitEdit" value="Edit"
+    <input type="submit" name="submitEdit" value="Edit" class="btn btn-primary"
      {if $obj->mEditEnabled} disabled="disabled" {/if} />
-    <input type="submit" name="submitUpdate" value="Update"
+    <input type="submit" name="submitUpdate" value="Update" class="btn"
      {if ! $obj->mEditEnabled} disabled="disabled" {/if} />
-    <input type="submit" name="submitCancel" value="Cancel"
+    <input type="submit" name="submitCancel" value="Cancel"  class="btn btn-dark"
      {if ! $obj->mEditEnabled} disabled="disabled" {/if} />
     {if $obj->mProcessButtonText}
     <input type="submit" name="submitProcessOrder"
      value="{$obj->mProcessButtonText}" />
     {/if}
   </p>
-  <h3>Order contains these products:</h3>
-  <table class="tss-table">
+  <h4>Order contains these products:</h4>
+  <table class="table table-hover">
     <tr>
       <th>Product ID</th>
       <th>Product Name</th>
@@ -126,8 +126,8 @@
     </tr>
   {/section}
   </table>
-  <h3>Order audit trail:</h3>
-  <table class="tss-table">
+  <h4>Order audit trail:</h4>
+  <table class="table table-hover">
     <tr>
       <th>Audit ID</th>
       <th>Created On</th>

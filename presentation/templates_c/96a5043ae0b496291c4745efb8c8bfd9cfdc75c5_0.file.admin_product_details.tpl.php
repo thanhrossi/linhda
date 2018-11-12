@@ -1,18 +1,18 @@
 <?php
-/* Smarty version 3.1.32, created on 2018-11-11 14:16:48
+/* Smarty version 3.1.32, created on 2018-11-11 15:24:26
   from 'C:\Program Files (x86)\Ampps\www\sushikai\presentation\templates\admin_product_details.tpl' */
 
 /* @var Smarty_Internal_Template $_smarty_tpl */
 if ($_smarty_tpl->_decodeProperties($_smarty_tpl, array (
   'version' => '3.1.32',
-  'unifunc' => 'content_5be839d058ecb3_10422259',
+  'unifunc' => 'content_5be849aadc77c4_91469453',
   'has_nocache_code' => false,
   'file_dependency' => 
   array (
     '96a5043ae0b496291c4745efb8c8bfd9cfdc75c5' => 
     array (
       0 => 'C:\\Program Files (x86)\\Ampps\\www\\sushikai\\presentation\\templates\\admin_product_details.tpl',
-      1 => 1541945806,
+      1 => 1541946963,
       2 => 'file',
     ),
   ),
@@ -20,7 +20,7 @@ if ($_smarty_tpl->_decodeProperties($_smarty_tpl, array (
   array (
   ),
 ),false)) {
-function content_5be839d058ecb3_10422259 (Smarty_Internal_Template $_smarty_tpl) {
+function content_5be849aadc77c4_91469453 (Smarty_Internal_Template $_smarty_tpl) {
 $_smarty_tpl->_checkPlugins(array(0=>array('file'=>'C:\\ProgramFiles(x86)\\Ampps\\www\\sushikai\\presentation\\smarty_plugins\\function.load_presentation_object.php','function'=>'smarty_function_load_presentation_object',),1=>array('file'=>'C:\\ProgramFiles(x86)\\Ampps\\www\\sushikai\\libs\\smarty\\plugins\\function.html_options.php','function'=>'smarty_function_html_options',),));
 echo smarty_function_load_presentation_object(array('filename'=>"admin_product_details",'assign'=>"obj"),$_smarty_tpl);?>
 
@@ -38,7 +38,7 @@ echo smarty_function_load_presentation_object(array('filename'=>"admin_product_d
   </h4>
   <?php if ($_smarty_tpl->tpl_vars['obj']->value->mErrorMessage) {?><p class="error"><?php echo $_smarty_tpl->tpl_vars['obj']->value->mErrorMessage;?>
 </p><?php }?>
-  <table class="table table-hover product-detail-admin">
+  <div class="table-responsive"><table class="table table-hover product-detail-admin">
     <tbody>
       <tr class="row">
         <td valign="top" class="col-md-6 pr-1">
@@ -148,6 +148,7 @@ echo smarty_function_load_presentation_object(array('filename'=>"admin_product_d
       </tr>
     </tbody>
   </table>
+  </div>
   <p>
     <font class="bold-text">Image name:</font> <?php echo $_smarty_tpl->tpl_vars['obj']->value->mProduct['image'];?>
 

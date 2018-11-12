@@ -1,18 +1,18 @@
 <?php
-/* Smarty version 3.1.32, created on 2018-11-11 14:54:56
+/* Smarty version 3.1.32, created on 2018-11-12 16:19:55
   from 'C:\Program Files (x86)\Ampps\www\sushikai\presentation\templates\admin_attributes.tpl' */
 
 /* @var Smarty_Internal_Template $_smarty_tpl */
 if ($_smarty_tpl->_decodeProperties($_smarty_tpl, array (
   'version' => '3.1.32',
-  'unifunc' => 'content_5be842c04277c7_41520176',
+  'unifunc' => 'content_5be9a82b86f6b7_46339998',
   'has_nocache_code' => false,
   'file_dependency' => 
   array (
     '99cb93b3c1a779f46c800f9e6bfe1e11e5335e75' => 
     array (
       0 => 'C:\\Program Files (x86)\\Ampps\\www\\sushikai\\presentation\\templates\\admin_attributes.tpl',
-      1 => 1541947010,
+      1 => 1542039593,
       2 => 'file',
     ),
   ),
@@ -20,7 +20,7 @@ if ($_smarty_tpl->_decodeProperties($_smarty_tpl, array (
   array (
   ),
 ),false)) {
-function content_5be842c04277c7_41520176 (Smarty_Internal_Template $_smarty_tpl) {
+function content_5be9a82b86f6b7_46339998 (Smarty_Internal_Template $_smarty_tpl) {
 $_smarty_tpl->_checkPlugins(array(0=>array('file'=>'C:\\ProgramFiles(x86)\\Ampps\\www\\sushikai\\presentation\\smarty_plugins\\function.load_presentation_object.php','function'=>'smarty_function_load_presentation_object',),));
 echo smarty_function_load_presentation_object(array('filename'=>"admin_attributes",'assign'=>"obj"),$_smarty_tpl);?>
 
@@ -52,7 +52,7 @@ for ($__section_i_0_iteration = 1, $_smarty_tpl->tpl_vars['__smarty_section_i']-
       <td>
         <input type="text" name="name"
          value="<?php echo $_smarty_tpl->tpl_vars['obj']->value->mAttributes[(isset($_smarty_tpl->tpl_vars['__smarty_section_i']->value['index']) ? $_smarty_tpl->tpl_vars['__smarty_section_i']->value['index'] : null)]['name'];?>
-" size="30" />
+" size="30" class="form-control" />
       </td>
       <td>
         <div class="btn-group" >
