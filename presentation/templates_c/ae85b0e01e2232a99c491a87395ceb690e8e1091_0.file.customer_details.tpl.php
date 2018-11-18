@@ -1,18 +1,18 @@
 <?php
-/* Smarty version 3.1.32, created on 2018-05-12 22:41:09
+/* Smarty version 3.1.32, created on 2018-11-18 08:40:08
   from 'C:\xampp\htdocs\sushikai\presentation\templates\customer_details.tpl' */
 
 /* @var Smarty_Internal_Template $_smarty_tpl */
 if ($_smarty_tpl->_decodeProperties($_smarty_tpl, array (
   'version' => '3.1.32',
-  'unifunc' => 'content_5af7cff5e6f9c0_24401718',
+  'unifunc' => 'content_5bf117586ab3c6_17926037',
   'has_nocache_code' => false,
   'file_dependency' => 
   array (
     'ae85b0e01e2232a99c491a87395ceb690e8e1091' => 
     array (
       0 => 'C:\\xampp\\htdocs\\sushikai\\presentation\\templates\\customer_details.tpl',
-      1 => 1526165438,
+      1 => 1542526806,
       2 => 'file',
     ),
   ),
@@ -20,7 +20,7 @@ if ($_smarty_tpl->_decodeProperties($_smarty_tpl, array (
   array (
   ),
 ),false)) {
-function content_5af7cff5e6f9c0_24401718 (Smarty_Internal_Template $_smarty_tpl) {
+function content_5bf117586ab3c6_17926037 (Smarty_Internal_Template $_smarty_tpl) {
 $_smarty_tpl->_checkPlugins(array(0=>array('file'=>'C:\\xampp\\htdocs\\sushikai\\presentation\\smarty_plugins\\function.load_presentation_object.php','function'=>'smarty_function_load_presentation_object',),));
 echo smarty_function_load_presentation_object(array('filename'=>"customer_details",'assign'=>"obj"),$_smarty_tpl);?>
 
@@ -31,7 +31,7 @@ echo smarty_function_load_presentation_object(array('filename'=>"customer_detail
     <tr>
       <td>E-mail Address:</td>
       <td>
-        <input type="text" name="email" value="<?php echo $_smarty_tpl->tpl_vars['obj']->value->mEmail;?>
+        <input class="form-control  mb-3" type="text" name="email" value="<?php echo $_smarty_tpl->tpl_vars['obj']->value->mEmail;?>
 "
          <?php if ($_smarty_tpl->tpl_vars['obj']->value->mEditMode) {?>readonly="readonly"<?php }?> size="32" />
         <?php if ($_smarty_tpl->tpl_vars['obj']->value->mEmailAlreadyTaken) {?>
@@ -45,7 +45,7 @@ echo smarty_function_load_presentation_object(array('filename'=>"customer_detail
     <tr>
       <td>Name:</td>
       <td>
-        <input type="text" name="name" value="<?php echo $_smarty_tpl->tpl_vars['obj']->value->mName;?>
+        <input class="form-control  mb-3" type="text" name="name" value="<?php echo $_smarty_tpl->tpl_vars['obj']->value->mName;?>
 " size="32" />
         <?php if ($_smarty_tpl->tpl_vars['obj']->value->mNameError) {?>
         <p class="error">You must enter your name.</p>
@@ -55,7 +55,7 @@ echo smarty_function_load_presentation_object(array('filename'=>"customer_detail
     <tr>
       <td>Password:</td>
       <td>
-        <input type="password" name="password" size="32" />
+        <input class="form-control  mb-3" type="password" name="password" size="32" />
         <?php if ($_smarty_tpl->tpl_vars['obj']->value->mPasswordError) {?>
         <p class="error">You must enter a password.</p>
         <?php }?>
@@ -64,7 +64,7 @@ echo smarty_function_load_presentation_object(array('filename'=>"customer_detail
     <tr>
       <td>Re-enter Password:</td>
       <td>
-        <input type="password" name="passwordConfirm" size="32" />
+        <input class="form-control  mb-3" type="password" name="passwordConfirm" size="32" />
         <?php if ($_smarty_tpl->tpl_vars['obj']->value->mPasswordConfirmError) {?>
         <p class="error">You must re-enter your password.</p>
         <?php } elseif ($_smarty_tpl->tpl_vars['obj']->value->mPasswordMatchError) {?>
@@ -99,7 +99,7 @@ echo smarty_function_load_presentation_object(array('filename'=>"customer_detail
     </tr>
     <?php }?>
   </table>
-  <input type="submit" name="sended" value="Confirm" /> |
+  <input  class="btn" type="submit" name="sended" value="Confirm" /> |
   <a href="<?php echo $_smarty_tpl->tpl_vars['obj']->value->mLinkToCancelPage;?>
 ">Cancel</a>
 </form>

@@ -2,18 +2,18 @@
 {load_presentation_object filename="search_box" assign="obj"}
 {* Start search box *}
 <div class="box">
-  <p class="box-title">Tìm kiếm </p>
+
   <form class="search_form" method="post" action="{$obj->mLinkToSearch}">
     <p>
-      <input maxlength="100" id="search_string" name="search_string"
-       value="{$obj->mSearchString}" size="19" />
-      <input type="submit" value="Go!" /><br />
+      <input class="input search-input" maxlength="100" id="search_string" name="search_string"
+       value="{$obj->mSearchString}" size="19" placeholder="Tìm kiếm"/>
+      <button type="submit" class="search-btn"  value="Go!" ><i class="fa fa-search"></i></button>
     </p>
-    <p>
+    {* <p>
       <input type="checkbox" id="all_words" name="all_words"
        {if $obj->mAllWords == "on"} checked="checked" {/if}/>
       tìm kiếm fulltext
-    </p>
+    </p> *}
   </form>
 </div>
 {* End search box *}

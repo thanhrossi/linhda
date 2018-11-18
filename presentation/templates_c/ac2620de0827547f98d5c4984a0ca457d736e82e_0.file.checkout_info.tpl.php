@@ -1,18 +1,18 @@
 <?php
-/* Smarty version 3.1.32, created on 2018-05-13 01:49:37
+/* Smarty version 3.1.32, created on 2018-11-18 09:15:18
   from 'C:\xampp\htdocs\sushikai\presentation\templates\checkout_info.tpl' */
 
 /* @var Smarty_Internal_Template $_smarty_tpl */
 if ($_smarty_tpl->_decodeProperties($_smarty_tpl, array (
   'version' => '3.1.32',
-  'unifunc' => 'content_5af7fc218ab2b7_26309778',
+  'unifunc' => 'content_5bf11f96199114_20088087',
   'has_nocache_code' => false,
   'file_dependency' => 
   array (
     'ac2620de0827547f98d5c4984a0ca457d736e82e' => 
     array (
       0 => 'C:\\xampp\\htdocs\\sushikai\\presentation\\templates\\checkout_info.tpl',
-      1 => 1526165475,
+      1 => 1542528917,
       2 => 'file',
     ),
   ),
@@ -20,14 +20,14 @@ if ($_smarty_tpl->_decodeProperties($_smarty_tpl, array (
   array (
   ),
 ),false)) {
-function content_5af7fc218ab2b7_26309778 (Smarty_Internal_Template $_smarty_tpl) {
+function content_5bf11f96199114_20088087 (Smarty_Internal_Template $_smarty_tpl) {
 $_smarty_tpl->_checkPlugins(array(0=>array('file'=>'C:\\xampp\\htdocs\\sushikai\\presentation\\smarty_plugins\\function.load_presentation_object.php','function'=>'smarty_function_load_presentation_object',),));
 echo smarty_function_load_presentation_object(array('filename'=>"checkout_info",'assign'=>"obj"),$_smarty_tpl);?>
 
 <form method="post" action="<?php echo $_smarty_tpl->tpl_vars['obj']->value->mLinkToCheckout;?>
 ">
   <h2>Your order consists of the following items:</h2>
-  <table class="tss-table">
+  <table class="shopping-cart-table table">
     <tr>
       <th>Product Name</th>
       <th>Price</th>
@@ -111,13 +111,13 @@ for ($__section_i_1_iteration = 1, $_smarty_tpl->tpl_vars['__smarty_section_i']-
     </select>
   </p>
   <?php }?>
-  <input type="submit" name="place_order" value="Place Order"
+  <input type="submit" name="place_order" class="primary-btn" value="Place Order"
    <?php echo $_smarty_tpl->tpl_vars['obj']->value->mOrderButtonVisible;?>
  /> |
   <a href="<?php echo $_smarty_tpl->tpl_vars['obj']->value->mLinkToCart;?>
-">Edit Shopping Cart</a> |
+"  class="edit-btn">Edit Shopping Cart</a> |
   <a href="<?php echo $_smarty_tpl->tpl_vars['obj']->value->mLinkToContinueShopping;?>
-">Tiếp tục mua hàng</a>
+"  class="edit-btn">Tiếp tục mua hàng</a>
 </form>
 <?php }
 }

@@ -1,18 +1,18 @@
 <?php
-/* Smarty version 3.1.32, created on 2018-05-12 15:58:30
+/* Smarty version 3.1.32, created on 2018-11-18 02:59:05
   from 'C:\xampp\htdocs\sushikai\presentation\templates\admin_categories.tpl' */
 
 /* @var Smarty_Internal_Template $_smarty_tpl */
 if ($_smarty_tpl->_decodeProperties($_smarty_tpl, array (
   'version' => '3.1.32',
-  'unifunc' => 'content_5af77196ac4e67_62564074',
+  'unifunc' => 'content_5bf0c769a70219_66181984',
   'has_nocache_code' => false,
   'file_dependency' => 
   array (
     'bb594e776d7e0d18e26eaaa6372bc2dd1e2705f9' => 
     array (
       0 => 'C:\\xampp\\htdocs\\sushikai\\presentation\\templates\\admin_categories.tpl',
-      1 => 1490817182,
+      1 => 1541947036,
       2 => 'file',
     ),
   ),
@@ -20,25 +20,25 @@ if ($_smarty_tpl->_decodeProperties($_smarty_tpl, array (
   array (
   ),
 ),false)) {
-function content_5af77196ac4e67_62564074 (Smarty_Internal_Template $_smarty_tpl) {
+function content_5bf0c769a70219_66181984 (Smarty_Internal_Template $_smarty_tpl) {
 $_smarty_tpl->_checkPlugins(array(0=>array('file'=>'C:\\xampp\\htdocs\\sushikai\\presentation\\smarty_plugins\\function.load_presentation_object.php','function'=>'smarty_function_load_presentation_object',),));
 echo smarty_function_load_presentation_object(array('filename'=>"admin_categories",'assign'=>"obj"),$_smarty_tpl);?>
 
 <form method="post"
  action="<?php echo $_smarty_tpl->tpl_vars['obj']->value->mLinkToDepartmentCategoriesAdmin;?>
 ">
-  <h3>
+  <h4>
     Editing categories for department: <?php echo $_smarty_tpl->tpl_vars['obj']->value->mDepartmentName;?>
  [
     <a href="<?php echo $_smarty_tpl->tpl_vars['obj']->value->mLinkToDepartmentsAdmin;?>
 ">back to departments ...</a> ]
-  </h3>
+  </h4>
 <?php if ($_smarty_tpl->tpl_vars['obj']->value->mErrorMessage) {?><p class="error"><?php echo $_smarty_tpl->tpl_vars['obj']->value->mErrorMessage;?>
 </p><?php }
 if ($_smarty_tpl->tpl_vars['obj']->value->mCategoriesCount == 0) {?>
   <p class="no-items-found">There are no categories in this department!</p>
 <?php } else { ?>
-  <table class="tss-table">
+  <div class="table-responsive"><table class="table table-hover">
     <tr>
       <th width="200">Category Name</th>
       <th>Category Description</th>
@@ -63,19 +63,22 @@ for ($__section_i_0_iteration = 1, $_smarty_tpl->tpl_vars['__smarty_section_i']-
 </textarea>
       </td>
       <td>
-        <input type="submit"
+        <div class="btn-group">
+          <input type="submit"
          name="submit_edit_prod_<?php echo $_smarty_tpl->tpl_vars['obj']->value->mCategories[(isset($_smarty_tpl->tpl_vars['__smarty_section_i']->value['index']) ? $_smarty_tpl->tpl_vars['__smarty_section_i']->value['index'] : null)]['category_id'];?>
 "
-         value="Edit Products" />
-        <input type="submit"
-         name="submit_update_cat_<?php echo $_smarty_tpl->tpl_vars['obj']->value->mCategories[(isset($_smarty_tpl->tpl_vars['__smarty_section_i']->value['index']) ? $_smarty_tpl->tpl_vars['__smarty_section_i']->value['index'] : null)]['category_id'];?>
+         value="Edit Products"  class="btn btn-primary" />
+          <input type="submit"
+          name="submit_update_cat_<?php echo $_smarty_tpl->tpl_vars['obj']->value->mCategories[(isset($_smarty_tpl->tpl_vars['__smarty_section_i']->value['index']) ? $_smarty_tpl->tpl_vars['__smarty_section_i']->value['index'] : null)]['category_id'];?>
 "
-         value="Update" />
-        <input type="submit" name="cancel" value="Cancel" />
-        <input type="submit"
-         name="submit_delete_cat_<?php echo $_smarty_tpl->tpl_vars['obj']->value->mCategories[(isset($_smarty_tpl->tpl_vars['__smarty_section_i']->value['index']) ? $_smarty_tpl->tpl_vars['__smarty_section_i']->value['index'] : null)]['category_id'];?>
+          value="Update"  class="btn btn-success" />
+          <input type="submit" name="cancel" value="Cancel"  class="btn btn-dark"  />
+          <input type="submit"
+          name="submit_delete_cat_<?php echo $_smarty_tpl->tpl_vars['obj']->value->mCategories[(isset($_smarty_tpl->tpl_vars['__smarty_section_i']->value['index']) ? $_smarty_tpl->tpl_vars['__smarty_section_i']->value['index'] : null)]['category_id'];?>
 "
-         value="Delete" />
+          value="Delete"  class="btn btn-danger"  />
+        </div>
+        
       </td>
     </tr>
     <?php } else { ?>
@@ -85,18 +88,21 @@ for ($__section_i_0_iteration = 1, $_smarty_tpl->tpl_vars['__smarty_section_i']-
       <td><?php echo $_smarty_tpl->tpl_vars['obj']->value->mCategories[(isset($_smarty_tpl->tpl_vars['__smarty_section_i']->value['index']) ? $_smarty_tpl->tpl_vars['__smarty_section_i']->value['index'] : null)]['description'];?>
 </td>
       <td>
-        <input type="submit"
+        <div class="btn-group">
+          <input type="submit"
          name="submit_edit_prod_<?php echo $_smarty_tpl->tpl_vars['obj']->value->mCategories[(isset($_smarty_tpl->tpl_vars['__smarty_section_i']->value['index']) ? $_smarty_tpl->tpl_vars['__smarty_section_i']->value['index'] : null)]['category_id'];?>
 "
-         value="Edit Products" />
-        <input type="submit"
-         name="submit_edit_cat_<?php echo $_smarty_tpl->tpl_vars['obj']->value->mCategories[(isset($_smarty_tpl->tpl_vars['__smarty_section_i']->value['index']) ? $_smarty_tpl->tpl_vars['__smarty_section_i']->value['index'] : null)]['category_id'];?>
+         value="Edit Products"  class="btn btn-primary"  />
+          <input type="submit"
+          name="submit_edit_cat_<?php echo $_smarty_tpl->tpl_vars['obj']->value->mCategories[(isset($_smarty_tpl->tpl_vars['__smarty_section_i']->value['index']) ? $_smarty_tpl->tpl_vars['__smarty_section_i']->value['index'] : null)]['category_id'];?>
 "
-         value="Edit" />
-        <input type="submit"
-         name="submit_delete_cat_<?php echo $_smarty_tpl->tpl_vars['obj']->value->mCategories[(isset($_smarty_tpl->tpl_vars['__smarty_section_i']->value['index']) ? $_smarty_tpl->tpl_vars['__smarty_section_i']->value['index'] : null)]['category_id'];?>
+          value="Edit"   class="btn btn-success" />
+          <input type="submit"
+          name="submit_delete_cat_<?php echo $_smarty_tpl->tpl_vars['obj']->value->mCategories[(isset($_smarty_tpl->tpl_vars['__smarty_section_i']->value['index']) ? $_smarty_tpl->tpl_vars['__smarty_section_i']->value['index'] : null)]['category_id'];?>
 "
-         value="Delete" />
+          value="Delete"  class="btn btn-danger"  />
+        </div>
+        
       </td>
     </tr>
     <?php }?>
@@ -104,13 +110,18 @@ for ($__section_i_0_iteration = 1, $_smarty_tpl->tpl_vars['__smarty_section_i']-
 }
 }
 ?>
-  </table>
+  </table></div>
 <?php }?>
   <h3>Add new category:</h3>
-  <input type="text" name="category_name" value="[name]" size="30" />
-  <input type="text" name="category_description" value="[description]"
-   size="60" />
-  <input type="submit" name="submit_add_cat_0" value="Add" />
+  <div  class="row" style="width: 700px;">
+    <div class="col-md-12">
+      <input type="text" name="category_name" value=""  placeholder="name" size="30" class="form-control mb-3"/>
+      <input type="text" name="category_description" value="" placeholder="description"
+      size="60" class="form-control mb-3" />
+      <input type="submit" name="submit_add_cat_0" value="Add" class="btn btn-info" />
+    </div>
+  </div>
+  
 </form>
 <?php }
 }

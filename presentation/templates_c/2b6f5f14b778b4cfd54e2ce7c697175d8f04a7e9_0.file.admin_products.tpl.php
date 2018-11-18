@@ -1,18 +1,18 @@
 <?php
-/* Smarty version 3.1.32, created on 2018-05-12 15:58:36
+/* Smarty version 3.1.32, created on 2018-11-18 02:59:08
   from 'C:\xampp\htdocs\sushikai\presentation\templates\admin_products.tpl' */
 
 /* @var Smarty_Internal_Template $_smarty_tpl */
 if ($_smarty_tpl->_decodeProperties($_smarty_tpl, array (
   'version' => '3.1.32',
-  'unifunc' => 'content_5af7719cb7a304_93532183',
+  'unifunc' => 'content_5bf0c76c1359a0_91158853',
   'has_nocache_code' => false,
   'file_dependency' => 
   array (
     '2b6f5f14b778b4cfd54e2ce7c697175d8f04a7e9' => 
     array (
       0 => 'C:\\xampp\\htdocs\\sushikai\\presentation\\templates\\admin_products.tpl',
-      1 => 1526165683,
+      1 => 1541946979,
       2 => 'file',
     ),
   ),
@@ -20,26 +20,26 @@ if ($_smarty_tpl->_decodeProperties($_smarty_tpl, array (
   array (
   ),
 ),false)) {
-function content_5af7719cb7a304_93532183 (Smarty_Internal_Template $_smarty_tpl) {
+function content_5bf0c76c1359a0_91158853 (Smarty_Internal_Template $_smarty_tpl) {
 $_smarty_tpl->_checkPlugins(array(0=>array('file'=>'C:\\xampp\\htdocs\\sushikai\\presentation\\smarty_plugins\\function.load_presentation_object.php','function'=>'smarty_function_load_presentation_object',),));
 echo smarty_function_load_presentation_object(array('filename'=>"admin_products",'assign'=>"obj"),$_smarty_tpl);?>
 
 <form method="post"
  action="<?php echo $_smarty_tpl->tpl_vars['obj']->value->mLinkToCategoryProductsAdmin;?>
 ">
-  <h3>
+  <h4>
     Editing products for category: <?php echo $_smarty_tpl->tpl_vars['obj']->value->mCategoryName;?>
  [
     <a href="<?php echo $_smarty_tpl->tpl_vars['obj']->value->mLinkToDepartmentCategoriesAdmin;?>
 ">
       Trở lại ...</a> ]
-  </h3>
+  </h4>
 <?php if ($_smarty_tpl->tpl_vars['obj']->value->mErrorMessage) {?><p class="error"><?php echo $_smarty_tpl->tpl_vars['obj']->value->mErrorMessage;?>
 </p><?php }
 if ($_smarty_tpl->tpl_vars['obj']->value->mProductsCount == 0) {?>
   <p class="no-items-found">There are no products in this category!</p>
 <?php } else { ?>
-  <table class="tss-table">
+  <div class="table-responsive"><table class="table table-hover">
     <tr>
       <th>Name</th>
       <th>Description</th>
@@ -67,21 +67,26 @@ for ($__section_i_0_iteration = 1, $_smarty_tpl->tpl_vars['__smarty_section_i']-
         <input type="submit"
          name="submit_edit_prod_<?php echo $_smarty_tpl->tpl_vars['obj']->value->mProducts[(isset($_smarty_tpl->tpl_vars['__smarty_section_i']->value['index']) ? $_smarty_tpl->tpl_vars['__smarty_section_i']->value['index'] : null)]['product_id'];?>
 "
-         value="Edit" />
+         value="Edit" class="btn btn-success" />
       </td>
     </tr>
   <?php
 }
 }
 ?>
-  </table>
+  </table></div>
 <?php }?>
   <h3>Add new product:</h3>
-  <input type="text" name="product_name" value="[name]" size="30" />
-  <input type="text" name="product_description" value="[description]"
-   size="60" />
-  <input type="text" name="product_price" value="[price]" size="10" />
-  <input type="submit" name="submit_add_prod_0" value="Add" />
+  <div class="row" style="width: 700px;">
+    <div class="col-md-12">
+      <input type="text" name="product_name" value="" placeholder="name" size="30"  class="form-control mb-3" />
+      <input type="text" name="product_description"  placeholder="description" value=""
+      size="60"  class="form-control mb-3" />
+      <input type="text" name="product_price" value="" placeholder="price" size="10"  class="form-control mb-3"/>
+      <input type="submit" name="submit_add_prod_0" value="Add" class="btn btn-success"/>
+    </div>
+  </div>
+  
 </form>
 <?php }
 }

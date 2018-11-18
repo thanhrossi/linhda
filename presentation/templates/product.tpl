@@ -10,10 +10,11 @@
 {/if}
 <p class="description">{$obj->mProduct.description}</p>
 <p class="section">
-  Price:
+  
   {if $obj->mProduct.discounted_price != 0}
-    <span class="old-price">{$obj->mProduct.price}</span>
-    <span class="price">{$obj->mProduct.discounted_price}</span>
+    <span class="price">${$obj->mProduct.discounted_price}</span>
+    <span class="old-price">${$obj->mProduct.price}</span>
+    
   {else}
     <span class="price">{$obj->mProduct.price}</span>
   {/if}
@@ -55,7 +56,7 @@
 
 {* Add the submit button and close the form *}
 <p>
-  <input type="submit" name="add_to_cart" value="Add to Cart" />
+  <input type="submit" name="add_to_cart"  class="btn  primary-btn" value="Add to Cart" />
 </p>
 </form>
 
@@ -64,14 +65,14 @@
 <form action="{$obj->mEditActionTarget}" target="_self"
  method="post" class="edit-form">
   <p>
-    <input type="submit" name="submit_edit" value="Edit Product Details" />
+    <input type="submit" name="submit_edit" value="Edit Product Details" class="btn edit-btn" />
   </p>
 </form>
 {/if}
 {if $obj->mLinkToContinueShopping}
 <a href="{$obj->mLinkToContinueShopping}">Tiếp tục mua hàng</a>
 {/if}
-<h2>Gợi ý sản phẩm: </h2>
+<h3 class="text-uppercase">Gợi ý sản phẩm</h3>
 <ol>
 {section name=i loop=$obj->mLocations}
   <li class="navigation">
@@ -90,16 +91,16 @@
 {/section}
 </ol>
 {if $obj->mRecommendations}
-<h2>Khách hàng mua nhiều: </h2>
-<ol>
+<h3 class="text-uppercase">Khách hàng mua nhiều</h3>
+<ol class="recommend-list">
   {section name=m loop=$obj->mRecommendations}
   <li>
     {strip}
     <a href="{$obj->mRecommendations[m].link_to_product}">
-      {$obj->mRecommendations[m].product_name}
+      {$obj->mRecommendations[m].product_name} <span class="list"> - {$obj->mRecommendations[m].description}</span>
     </a>
     {/strip}
-    <span class="list"> - {$obj->mRecommendations[m].description}</span>
+    
   </li>
   {/section}
 </ol>

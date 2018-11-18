@@ -37,7 +37,7 @@ define('SITE_GENERIC_ERROR_MESSAGE', '<h1>TShirtShop Error!</h1>');
 define('DB_PERSISTENCY', 'true');
 define('DB_SERVER', 'localhost');
 define('DB_USERNAME', 'root');
-define('DB_PASSWORD', 'mysql');
+define('DB_PASSWORD', '');
 define('DB_DATABASE', 'sushikai2');
 define('PDO_DSN', 'mysql:host=' . DB_SERVER . ';dbname=' . DB_DATABASE);
 

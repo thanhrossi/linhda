@@ -1,18 +1,18 @@
 <?php
-/* Smarty version 3.1.32, created on 2018-05-12 16:53:43
+/* Smarty version 3.1.32, created on 2018-11-18 09:31:42
   from 'C:\xampp\htdocs\sushikai\presentation\templates\product.tpl' */
 
 /* @var Smarty_Internal_Template $_smarty_tpl */
 if ($_smarty_tpl->_decodeProperties($_smarty_tpl, array (
   'version' => '3.1.32',
-  'unifunc' => 'content_5af77e872eb1e1_73076404',
+  'unifunc' => 'content_5bf1236eeb5592_19425120',
   'has_nocache_code' => false,
   'file_dependency' => 
   array (
     '8e5c7da9a7ffba4019eb219d61aa73497c7a83c2' => 
     array (
       0 => 'C:\\xampp\\htdocs\\sushikai\\presentation\\templates\\product.tpl',
-      1 => 1526164991,
+      1 => 1542529901,
       2 => 'file',
     ),
   ),
@@ -20,7 +20,7 @@ if ($_smarty_tpl->_decodeProperties($_smarty_tpl, array (
   array (
   ),
 ),false)) {
-function content_5af77e872eb1e1_73076404 (Smarty_Internal_Template $_smarty_tpl) {
+function content_5bf1236eeb5592_19425120 (Smarty_Internal_Template $_smarty_tpl) {
 $_smarty_tpl->_checkPlugins(array(0=>array('file'=>'C:\\xampp\\htdocs\\sushikai\\presentation\\smarty_plugins\\function.load_presentation_object.php','function'=>'smarty_function_load_presentation_object',),));
 echo smarty_function_load_presentation_object(array('filename'=>"product",'assign'=>"obj"),$_smarty_tpl);?>
 
@@ -41,12 +41,13 @@ if ($_smarty_tpl->tpl_vars['obj']->value->mProduct['image_2']) {?>
 <p class="description"><?php echo $_smarty_tpl->tpl_vars['obj']->value->mProduct['description'];?>
 </p>
 <p class="section">
-  Price:
+  
   <?php if ($_smarty_tpl->tpl_vars['obj']->value->mProduct['discounted_price'] != 0) {?>
-    <span class="old-price"><?php echo $_smarty_tpl->tpl_vars['obj']->value->mProduct['price'];?>
+    <span class="price">$<?php echo $_smarty_tpl->tpl_vars['obj']->value->mProduct['discounted_price'];?>
 </span>
-    <span class="price"><?php echo $_smarty_tpl->tpl_vars['obj']->value->mProduct['discounted_price'];?>
+    <span class="old-price">$<?php echo $_smarty_tpl->tpl_vars['obj']->value->mProduct['price'];?>
 </span>
+    
   <?php } else { ?>
     <span class="price"><?php echo $_smarty_tpl->tpl_vars['obj']->value->mProduct['price'];?>
 </span>
@@ -96,7 +97,7 @@ $_smarty_tpl->tpl_vars['__smarty_section_k']->value['last'] = ($__section_k_0_it
 </p>
 
 <p>
-  <input type="submit" name="add_to_cart" value="Add to Cart" />
+  <input type="submit" name="add_to_cart"  class="btn  primary-btn" value="Add to Cart" />
 </p>
 </form>
 
@@ -105,7 +106,7 @@ $_smarty_tpl->tpl_vars['__smarty_section_k']->value['last'] = ($__section_k_0_it
 " target="_self"
  method="post" class="edit-form">
   <p>
-    <input type="submit" name="submit_edit" value="Edit Product Details" />
+    <input type="submit" name="submit_edit" value="Edit Product Details" class="btn edit-btn" />
   </p>
 </form>
 <?php }
@@ -113,7 +114,7 @@ if ($_smarty_tpl->tpl_vars['obj']->value->mLinkToContinueShopping) {?>
 <a href="<?php echo $_smarty_tpl->tpl_vars['obj']->value->mLinkToContinueShopping;?>
 ">Tiếp tục mua hàng</a>
 <?php }?>
-<h2>Gợi ý sản phẩm: </h2>
+<h3 class="text-uppercase">Gợi ý sản phẩm</h3>
 <ol>
 <?php
 $__section_i_1_loop = (is_array(@$_loop=$_smarty_tpl->tpl_vars['obj']->value->mLocations) ? count($_loop) : max(0, (int) $_loop));
@@ -137,8 +138,8 @@ for ($__section_i_1_iteration = 1, $_smarty_tpl->tpl_vars['__smarty_section_i']-
 ?>
 </ol>
 <?php if ($_smarty_tpl->tpl_vars['obj']->value->mRecommendations) {?>
-<h2>Khách hàng mua nhiều: </h2>
-<ol>
+<h3 class="text-uppercase">Khách hàng mua nhiều</h3>
+<ol class="recommend-list">
   <?php
 $__section_m_2_loop = (is_array(@$_loop=$_smarty_tpl->tpl_vars['obj']->value->mRecommendations) ? count($_loop) : max(0, (int) $_loop));
 $__section_m_2_total = $__section_m_2_loop;
@@ -149,9 +150,9 @@ for ($__section_m_2_iteration = 1, $_smarty_tpl->tpl_vars['__smarty_section_m']-
   <li>
     <a href="<?php echo $_smarty_tpl->tpl_vars['obj']->value->mRecommendations[(isset($_smarty_tpl->tpl_vars['__smarty_section_m']->value['index']) ? $_smarty_tpl->tpl_vars['__smarty_section_m']->value['index'] : null)]['link_to_product'];?>
 "><?php echo $_smarty_tpl->tpl_vars['obj']->value->mRecommendations[(isset($_smarty_tpl->tpl_vars['__smarty_section_m']->value['index']) ? $_smarty_tpl->tpl_vars['__smarty_section_m']->value['index'] : null)]['product_name'];?>
-</a>
-    <span class="list"> - <?php echo $_smarty_tpl->tpl_vars['obj']->value->mRecommendations[(isset($_smarty_tpl->tpl_vars['__smarty_section_m']->value['index']) ? $_smarty_tpl->tpl_vars['__smarty_section_m']->value['index'] : null)]['description'];?>
-</span>
+ <span class="list"> - <?php echo $_smarty_tpl->tpl_vars['obj']->value->mRecommendations[(isset($_smarty_tpl->tpl_vars['__smarty_section_m']->value['index']) ? $_smarty_tpl->tpl_vars['__smarty_section_m']->value['index'] : null)]['description'];?>
+</span></a>
+    
   </li>
   <?php
 }

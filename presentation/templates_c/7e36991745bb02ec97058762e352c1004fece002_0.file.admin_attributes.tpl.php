@@ -1,18 +1,18 @@
 <?php
-/* Smarty version 3.1.32, created on 2018-05-13 01:50:02
+/* Smarty version 3.1.32, created on 2018-11-18 03:02:34
   from 'C:\xampp\htdocs\sushikai\presentation\templates\admin_attributes.tpl' */
 
 /* @var Smarty_Internal_Template $_smarty_tpl */
 if ($_smarty_tpl->_decodeProperties($_smarty_tpl, array (
   'version' => '3.1.32',
-  'unifunc' => 'content_5af7fc3a9862c1_75895768',
+  'unifunc' => 'content_5bf0c83a10a2a3_47295716',
   'has_nocache_code' => false,
   'file_dependency' => 
   array (
     '7e36991745bb02ec97058762e352c1004fece002' => 
     array (
       0 => 'C:\\xampp\\htdocs\\sushikai\\presentation\\templates\\admin_attributes.tpl',
-      1 => 1490817182,
+      1 => 1542039593,
       2 => 'file',
     ),
   ),
@@ -20,14 +20,14 @@ if ($_smarty_tpl->_decodeProperties($_smarty_tpl, array (
   array (
   ),
 ),false)) {
-function content_5af7fc3a9862c1_75895768 (Smarty_Internal_Template $_smarty_tpl) {
+function content_5bf0c83a10a2a3_47295716 (Smarty_Internal_Template $_smarty_tpl) {
 $_smarty_tpl->_checkPlugins(array(0=>array('file'=>'C:\\xampp\\htdocs\\sushikai\\presentation\\smarty_plugins\\function.load_presentation_object.php','function'=>'smarty_function_load_presentation_object',),));
 echo smarty_function_load_presentation_object(array('filename'=>"admin_attributes",'assign'=>"obj"),$_smarty_tpl);?>
 
 <form method="post"
  action="<?php echo $_smarty_tpl->tpl_vars['obj']->value->mLinkToAttributesAdmin;?>
 ">
-  <h3>Edit the TShirtShop product attributes:</h3>
+  <h4 class="card-title">Edit the CocoShop product attributes:</h4>
 <?php if ($_smarty_tpl->tpl_vars['obj']->value->mErrorMessage) {?><p class="error"><?php echo $_smarty_tpl->tpl_vars['obj']->value->mErrorMessage;?>
 </p><?php }
 if ($_smarty_tpl->tpl_vars['obj']->value->mAttributesCount == 0) {?>
@@ -35,7 +35,7 @@ if ($_smarty_tpl->tpl_vars['obj']->value->mAttributesCount == 0) {?>
     There are no products attributes in your database!
   </p>
 <?php } else { ?>
-  <table class="tss-table">
+  <div class="table-responsive"><table class="table table-hover table-striped">
     <tr>
       <th>Attribute Name</th>
       <th width="240">&nbsp;</th>
@@ -52,22 +52,22 @@ for ($__section_i_0_iteration = 1, $_smarty_tpl->tpl_vars['__smarty_section_i']-
       <td>
         <input type="text" name="name"
          value="<?php echo $_smarty_tpl->tpl_vars['obj']->value->mAttributes[(isset($_smarty_tpl->tpl_vars['__smarty_section_i']->value['index']) ? $_smarty_tpl->tpl_vars['__smarty_section_i']->value['index'] : null)]['name'];?>
-" size="30" />
+" size="30" class="form-control" />
       </td>
       <td>
-        <input type="submit"
-         name="submit_edit_attr_val_<?php echo $_smarty_tpl->tpl_vars['obj']->value->mAttributes[(isset($_smarty_tpl->tpl_vars['__smarty_section_i']->value['index']) ? $_smarty_tpl->tpl_vars['__smarty_section_i']->value['index'] : null)]['attribute_id'];?>
-"
-         value="Edit Attribute Values" />
-        <input type="submit"
+        <div class="btn-group" >
+          <input type="submit"
          name="submit_update_attr_<?php echo $_smarty_tpl->tpl_vars['obj']->value->mAttributes[(isset($_smarty_tpl->tpl_vars['__smarty_section_i']->value['index']) ? $_smarty_tpl->tpl_vars['__smarty_section_i']->value['index'] : null)]['attribute_id'];?>
 "
-         value="Update" />
-        <input type="submit" name="cancel" value="Cancel" />
-        <input type="submit"
-         name="submit_delete_attr_<?php echo $_smarty_tpl->tpl_vars['obj']->value->mAttributes[(isset($_smarty_tpl->tpl_vars['__smarty_section_i']->value['index']) ? $_smarty_tpl->tpl_vars['__smarty_section_i']->value['index'] : null)]['attribute_id'];?>
+         value="Update" class="btn btn-primary"/>
+          <input type="submit" name="cancel" value="Cancel"  class="btn btn-dark" />
+          <input type="submit"
+          name="submit_delete_attr_<?php echo $_smarty_tpl->tpl_vars['obj']->value->mAttributes[(isset($_smarty_tpl->tpl_vars['__smarty_section_i']->value['index']) ? $_smarty_tpl->tpl_vars['__smarty_section_i']->value['index'] : null)]['attribute_id'];?>
 "
-         value="Delete" />
+          value="Delete"  class="btn btn-danger" />
+        </div>
+        
+        
       </td>
     </tr>
     <?php } else { ?>
@@ -75,18 +75,21 @@ for ($__section_i_0_iteration = 1, $_smarty_tpl->tpl_vars['__smarty_section_i']-
       <td><?php echo $_smarty_tpl->tpl_vars['obj']->value->mAttributes[(isset($_smarty_tpl->tpl_vars['__smarty_section_i']->value['index']) ? $_smarty_tpl->tpl_vars['__smarty_section_i']->value['index'] : null)]['name'];?>
 </td>
       <td>
-        <input type="submit"
+        <div class="btn-group">
+          <input type="submit"
          name="submit_edit_val_<?php echo $_smarty_tpl->tpl_vars['obj']->value->mAttributes[(isset($_smarty_tpl->tpl_vars['__smarty_section_i']->value['index']) ? $_smarty_tpl->tpl_vars['__smarty_section_i']->value['index'] : null)]['attribute_id'];?>
 "
-         value="Edit Attribute Values" />
+         value="Edit Attribute Values" class="btn btn-primary"/>
         <input type="submit"
          name="submit_edit_attr_<?php echo $_smarty_tpl->tpl_vars['obj']->value->mAttributes[(isset($_smarty_tpl->tpl_vars['__smarty_section_i']->value['index']) ? $_smarty_tpl->tpl_vars['__smarty_section_i']->value['index'] : null)]['attribute_id'];?>
 "
-         value="Edit" />
+         value="Edit" class="btn btn-success"/>
         <input type="submit"
          name="submit_delete_attr_<?php echo $_smarty_tpl->tpl_vars['obj']->value->mAttributes[(isset($_smarty_tpl->tpl_vars['__smarty_section_i']->value['index']) ? $_smarty_tpl->tpl_vars['__smarty_section_i']->value['index'] : null)]['attribute_id'];?>
 "
-         value="Delete" />
+         value="Delete" class="btn btn-danger" />
+        </div>
+        
       </td>
     </tr>
     <?php }?>
@@ -94,13 +97,15 @@ for ($__section_i_0_iteration = 1, $_smarty_tpl->tpl_vars['__smarty_section_i']-
 }
 }
 ?>
-  </table>
+  </table></div>
 <?php }?>
   <h3>Add new attribute:</h3>
-  <p>
-    <input type="text" name="attribute_name" value="[name]" size="30" />
-    <input type="submit" name="submit_add_attr_0" value="Add" />
-  </p>
+  <div class="row" style="width: 700px;">
+    <div class="col-md-12">
+      <input type="text" name="attribute_name" value="" placeholder="name" size="30"  class="form-control mb-3"/>
+      <input type="submit" name="submit_add_attr_0" value="Add" class="btn btn-info" />
+    </div>
+  </div>
 </form>
 <?php }
 }

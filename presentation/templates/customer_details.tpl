@@ -6,7 +6,7 @@
     <tr>
       <td>E-mail Address:</td>
       <td>
-        <input type="text" name="email" value="{$obj->mEmail}"
+        <input class="form-control  mb-3" type="text" name="email" value="{$obj->mEmail}"
          {if $obj->mEditMode}readonly="readonly"{/if} size="32" />
         {if $obj->mEmailAlreadyTaken}
         <p class="error">A user with that e-mail address already exists.</p>
@@ -19,7 +19,7 @@
     <tr>
       <td>Name:</td>
       <td>
-        <input type="text" name="name" value="{$obj->mName}" size="32" />
+        <input class="form-control  mb-3" type="text" name="name" value="{$obj->mName}" size="32" />
         {if $obj->mNameError}
         <p class="error">You must enter your name.</p>
         {/if}
@@ -28,7 +28,7 @@
     <tr>
       <td>Password:</td>
       <td>
-        <input type="password" name="password" size="32" />
+        <input class="form-control  mb-3" type="password" name="password" size="32" />
         {if $obj->mPasswordError}
         <p class="error">You must enter a password.</p>
         {/if}
@@ -37,7 +37,7 @@
     <tr>
       <td>Re-enter Password:</td>
       <td>
-        <input type="password" name="passwordConfirm" size="32" />
+        <input class="form-control  mb-3" type="password" name="passwordConfirm" size="32" />
         {if $obj->mPasswordConfirmError}
         <p class="error">You must re-enter your password.</p>
         {elseif $obj->mPasswordMatchError}
@@ -69,6 +69,6 @@
     </tr>
     {/if}
   </table>
-  <input type="submit" name="sended" value="Confirm" /> |
+  <input  class="btn" type="submit" name="sended" value="Confirm" /> |
   <a href="{$obj->mLinkToCancelPage}">Cancel</a>
 </form>

@@ -2,7 +2,7 @@
 {load_presentation_object filename="checkout_info" assign="obj"}
 <form method="post" action="{$obj->mLinkToCheckout}">
   <h2>Your order consists of the following items:</h2>
-  <table class="tss-table">
+  <table class="shopping-cart-table table">
     <tr>
       <th>Product Name</th>
       <th>Price</th>
@@ -52,8 +52,8 @@
     </select>
   </p>
   {/if}
-  <input type="submit" name="place_order" value="Place Order"
+  <input type="submit" name="place_order" class="primary-btn" value="Place Order"
    {$obj->mOrderButtonVisible} /> |
-  <a href="{$obj->mLinkToCart}">Edit Shopping Cart</a> |
-  <a href="{$obj->mLinkToContinueShopping}">Tiếp tục mua hàng</a>
+  <a href="{$obj->mLinkToCart}"  class="edit-btn">Edit Shopping Cart</a> |
+  <a href="{$obj->mLinkToContinueShopping}"  class="edit-btn">Tiếp tục mua hàng</a>
 </form>

@@ -3,27 +3,8 @@
 {if $obj->mSearchDescription != ""}
   <p class="description">{$obj->mSearchDescription}</p>
 {/if}
-{if count($obj->mProductListPages) > 0}
-<p>
 
-  {if $obj->mLinkToPreviousPage}
-  <a href="{$obj->mLinkToPreviousPage}"><<</a>
-  {/if}
 
-  {section name=m loop=$obj->mProductListPages}
-    {if $obj->mPage eq $smarty.section.m.index_next}
-    <strong>{$smarty.section.m.index_next}</strong>
-    {else}
-    <a href="{$obj->mProductListPages[m]}">{$smarty.section.m.index_next}</a>
-    {/if}
-  {/section}
-
-  {if $obj->mLinkToNextPage}
-  <a href="{$obj->mLinkToNextPage}">>></a>
-  {/if}
-
-</p>
-{/if}
 {if $obj->mProducts}
 <table class="product-list" border="0">
   <tbody>
@@ -39,18 +20,22 @@
         </h3>
         <p>
           {if $obj->mProducts[k].thumbnail neq ""}
-          <a href="{$obj->mProducts[k].link_to_product}">
-            <img src="{$obj->mProducts[k].thumbnail}"
-             alt="{$obj->mProducts[k].name}" />
-          </a>
+          
+            <a href="{$obj->mProducts[k].link_to_product}">
+              <span class="image-wrapper"><img src="{$obj->mProducts[k].thumbnail}"
+              alt="{$obj->mProducts[k].name}" />
+              </span>
+            </a>
+          
           {/if}
-          {$obj->mProducts[k].description}
+         {* {$obj->mProducts[k].description} *}
         </p>
         <p class="section">
-          Price:
+          
           {if $obj->mProducts[k].discounted_price != 0}
-            <span class="old-price">{$obj->mProducts[k].price}</span>
-            <span class="price">{$obj->mProducts[k].discounted_price}</span>
+            <span class="price">${$obj->mProducts[k].discounted_price}</span>
+            <span class="old-price">${$obj->mProducts[k].price}</span>
+            
           {else}
             <span class="price">{$obj->mProducts[k].price}</span>
           {/if}
@@ -92,7 +77,7 @@
 
         {* Add the submit button and close the form *}
         <p>
-          <input type="submit" name="add_to_cart" value="Add to Cart" />
+          <input type="submit" name="name="add_to_cart"  class="btn primary-btn" value="Add to Cart" />
         </p>
         </form>
 
@@ -102,7 +87,7 @@
          method="post" class="edit-form">
           <input type="hidden" name="product_id"
            value="{$obj->mProducts[k].product_id}" />
-          <input type="submit" name="submit" value="Edit Product Details" />
+          <input type="submit" name="submit" value="Edit Product Details" class="btn edit-btn" />
         </form>
       {/if}
       </td>
@@ -113,4 +98,29 @@
   {/section}
   </tbody>
 </table>
+
+
+{/if}
+{if count($obj->mProductListPages) > 0}
+<nav aria-label="Page navigation">
+  <ul class="pagination">
+    {if $obj->mLinkToPreviousPage}
+    <li class="page-item"><a href="{$obj->mLinkToPreviousPage}"><<</a></li>
+    {/if}
+
+    {section name=m loop=$obj->mProductListPages}
+      {if $obj->mPage eq $smarty.section.m.index_next}
+      <li class="page-item active">
+        <a class="page-link" href="#">{$smarty.section.m.index_next}</a>
+      </li>
+      {else}
+      <li class="page-item"><a href="{$obj->mProductListPages[m]}">{$smarty.section.m.index_next}</a></li>
+      {/if}
+    {/section}
+
+    {if $obj->mLinkToNextPage}
+    <li class="page-item"><a href="{$obj->mLinkToNextPage}">>></a></li>
+    {/if}
+  </ul>
+</nav>
 {/if}

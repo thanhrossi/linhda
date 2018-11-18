@@ -1,18 +1,18 @@
 <?php
-/* Smarty version 3.1.32, created on 2018-05-12 15:58:40
+/* Smarty version 3.1.32, created on 2018-11-18 07:06:34
   from 'C:\xampp\htdocs\sushikai\presentation\templates\admin_product_details.tpl' */
 
 /* @var Smarty_Internal_Template $_smarty_tpl */
 if ($_smarty_tpl->_decodeProperties($_smarty_tpl, array (
   'version' => '3.1.32',
-  'unifunc' => 'content_5af771a0be9086_30570301',
+  'unifunc' => 'content_5bf1016aa96da4_93412985',
   'has_nocache_code' => false,
   'file_dependency' => 
   array (
     '945afe6e1d405a385d8481b38d0d78b781f5dc2d' => 
     array (
       0 => 'C:\\xampp\\htdocs\\sushikai\\presentation\\templates\\admin_product_details.tpl',
-      1 => 1526165731,
+      1 => 1541946963,
       2 => 'file',
     ),
   ),
@@ -20,14 +20,14 @@ if ($_smarty_tpl->_decodeProperties($_smarty_tpl, array (
   array (
   ),
 ),false)) {
-function content_5af771a0be9086_30570301 (Smarty_Internal_Template $_smarty_tpl) {
+function content_5bf1016aa96da4_93412985 (Smarty_Internal_Template $_smarty_tpl) {
 $_smarty_tpl->_checkPlugins(array(0=>array('file'=>'C:\\xampp\\htdocs\\sushikai\\presentation\\smarty_plugins\\function.load_presentation_object.php','function'=>'smarty_function_load_presentation_object',),1=>array('file'=>'C:\\xampp\\htdocs\\sushikai\\libs\\smarty\\plugins\\function.html_options.php','function'=>'smarty_function_html_options',),));
 echo smarty_function_load_presentation_object(array('filename'=>"admin_product_details",'assign'=>"obj"),$_smarty_tpl);?>
 
 <form enctype="multipart/form-data" method="post"
  action="<?php echo $_smarty_tpl->tpl_vars['obj']->value->mLinkToProductDetailsAdmin;?>
 ">
-  <h3>
+  <h4>
     Editing product: ID #<?php echo $_smarty_tpl->tpl_vars['obj']->value->mProduct['product_id'];?>
  &mdash;
     <?php echo $_smarty_tpl->tpl_vars['obj']->value->mProduct['name'];?>
@@ -35,26 +35,26 @@ echo smarty_function_load_presentation_object(array('filename'=>"admin_product_d
     <a href="<?php echo $_smarty_tpl->tpl_vars['obj']->value->mLinkToCategoryProductsAdmin;?>
 ">
       trở lại ...</a> ]
-  </h3>
+  </h4>
   <?php if ($_smarty_tpl->tpl_vars['obj']->value->mErrorMessage) {?><p class="error"><?php echo $_smarty_tpl->tpl_vars['obj']->value->mErrorMessage;?>
 </p><?php }?>
-  <table class="borderless-table">
+  <div class="table-responsive"><table class="table table-hover product-detail-admin">
     <tbody>
-      <tr>
-        <td valign="top">
+      <tr class="row">
+        <td valign="top" class="col-md-6 pr-1">
           <p class="bold-text">
             Product name:
           </p>
           <p>
             <input type="text" name="name"
             value="<?php echo $_smarty_tpl->tpl_vars['obj']->value->mProduct['name'];?>
-" size="30" />
+" size="30" class="form-control mb-3" />
           </p>
           <p class="bold-text">
             Product description:
           </p>
           <p>
-            <textarea name="description" rows="3" cols="60"><?php echo $_smarty_tpl->tpl_vars['obj']->value->mProduct['description'];?>
+            <textarea name="description" rows="20" cols="60" class="form-control mb-3"><?php echo $_smarty_tpl->tpl_vars['obj']->value->mProduct['description'];?>
 </textarea>
           </p>
           <p class="bold-text">
@@ -63,7 +63,7 @@ echo smarty_function_load_presentation_object(array('filename'=>"admin_product_d
           <p>
             <input type="text" name="price"
              value="<?php echo $_smarty_tpl->tpl_vars['obj']->value->mProduct['price'];?>
-" size="5" />
+" size="5" class="form-control mb-3" />
           </p>
           <p class="bold-text">
             Product discounted price:
@@ -71,45 +71,45 @@ echo smarty_function_load_presentation_object(array('filename'=>"admin_product_d
           <p>
             <input type="text" name="discounted_price"
              value="<?php echo $_smarty_tpl->tpl_vars['obj']->value->mProduct['discounted_price'];?>
-" size="5" />
+" size="5"  class="form-control mb-3"/>
           </p>
           <p>
-            <input type="submit" name="UpdateProductInfo"
-             value="Update info" />
+            <input type="submit" class="btn btn-primary"  name="UpdateProductInfo"
+             value="Update info" class="btn btn-primary" />
           </p>
         </td>
-        <td valign="top">
-          <p>
+        <td valign="top"  class="col-md-6 pr-1">
+          <div class="">
             <font class="bold-text">Product belongs to these categories:</font>
             <?php echo $_smarty_tpl->tpl_vars['obj']->value->mProductCategoriesString;?>
 
-          </p>
-          <p class="bold-text">
+          </div>
+          <p class="bold-text ">
             Remove this product from:
           </p>
-          <p>
-            <?php echo smarty_function_html_options(array('name'=>"TargetCategoryIdRemove",'options'=>$_smarty_tpl->tpl_vars['obj']->value->mRemoveFromCategories),$_smarty_tpl);?>
+          <p  class="">
+            <?php echo smarty_function_html_options(array('name'=>"TargetCategoryIdRemove",'class'=>"custom-select",'options'=>$_smarty_tpl->tpl_vars['obj']->value->mRemoveFromCategories),$_smarty_tpl);?>
 
-            <input type="submit" name="RemoveFromCategory" value="Remove"
+            <input type="submit"  name="RemoveFromCategory" value="Remove"
              <?php if ($_smarty_tpl->tpl_vars['obj']->value->mRemoveFromCategoryButtonDisabled) {?>
-             disabled="disabled" <?php }?>/>
+             disabled="disabled"  class="btn btn-disable"<?php }?>/>
           </p>
           <p class="bold-text">
             Assign product to this category:
           </p>
-          <p>
-            <?php echo smarty_function_html_options(array('name'=>"TargetCategoryIdAssign",'options'=>$_smarty_tpl->tpl_vars['obj']->value->mAssignOrMoveTo),$_smarty_tpl);?>
+          <p  class="">
+            <?php echo smarty_function_html_options(array('name'=>"TargetCategoryIdAssign",'class'=>"custom-select",'options'=>$_smarty_tpl->tpl_vars['obj']->value->mAssignOrMoveTo),$_smarty_tpl);?>
 
-            <input type="submit" name="Assign" value="Assign" />
+            <input type="submit" class="btn btn-primary"  name="Assign" value="Assign" />
           </p>
           <p class="bold-text">
             Move product to this category:
           </p>
-          <p>
-            <?php echo smarty_function_html_options(array('name'=>"TargetCategoryIdMove",'options'=>$_smarty_tpl->tpl_vars['obj']->value->mAssignOrMoveTo),$_smarty_tpl);?>
+          <p  class="">
+            <?php echo smarty_function_html_options(array('name'=>"TargetCategoryIdMove",'class'=>"custom-select",'options'=>$_smarty_tpl->tpl_vars['obj']->value->mAssignOrMoveTo),$_smarty_tpl);?>
 
-            <input type="submit" name="Move" value="Move" />
-            <input type="submit" name="RemoveFromCatalog"
+            <input type="submit" class="btn btn-primary"  name="Move" value="Move" />
+            <input type="submit" class="btn btn-primary"  name="RemoveFromCatalog"
              value="Remove product from catalog"
              <?php if (!$_smarty_tpl->tpl_vars['obj']->value->mRemoveFromCategoryButtonDisabled) {?>
              disabled="disabled" <?php }?>/>
@@ -118,10 +118,10 @@ echo smarty_function_load_presentation_object(array('filename'=>"admin_product_d
           <p class="bold-text">
             Product attributes:
           </p>
-          <p>
-            <?php echo smarty_function_html_options(array('name'=>"TargetAttributeValueIdRemove",'options'=>$_smarty_tpl->tpl_vars['obj']->value->mProductAttributes),$_smarty_tpl);?>
+          <p  class="">
+            <?php echo smarty_function_html_options(array('name'=>"TargetAttributeValueIdRemove",'class'=>"custom-select",'options'=>$_smarty_tpl->tpl_vars['obj']->value->mProductAttributes),$_smarty_tpl);?>
 
-            <input type="submit" name="RemoveAttributeValue"
+            <input type="submit" class="btn btn-primary"  name="RemoveAttributeValue"
              value="Remove" />
           </p>
           <?php }?>
@@ -130,9 +130,9 @@ echo smarty_function_load_presentation_object(array('filename'=>"admin_product_d
             Assign attribute to product:
           </p>
           <p>
-            <?php echo smarty_function_html_options(array('name'=>"TargetAttributeValueIdAssign",'options'=>$_smarty_tpl->tpl_vars['obj']->value->mCatalogAttributes),$_smarty_tpl);?>
+            <?php echo smarty_function_html_options(array('name'=>"TargetAttributeValueIdAssign",'class'=>"custom-select",'options'=>$_smarty_tpl->tpl_vars['obj']->value->mCatalogAttributes),$_smarty_tpl);?>
 
-            <input type="submit" name="AssignAttributeValue"
+            <input type="submit" class="btn btn-primary"  name="AssignAttributeValue"
              value="Assign" />
           </p>
           <?php }?>
@@ -140,19 +140,20 @@ echo smarty_function_load_presentation_object(array('filename'=>"admin_product_d
             Set display option for this product:
           </p>
           <p>
-            <?php echo smarty_function_html_options(array('name'=>"ProductDisplay",'options'=>$_smarty_tpl->tpl_vars['obj']->value->mProductDisplayOptions,'selected'=>$_smarty_tpl->tpl_vars['obj']->value->mProduct['display']),$_smarty_tpl);?>
+            <?php echo smarty_function_html_options(array('name'=>"ProductDisplay",'class'=>"custom-select",'options'=>$_smarty_tpl->tpl_vars['obj']->value->mProductDisplayOptions,'selected'=>$_smarty_tpl->tpl_vars['obj']->value->mProduct['display']),$_smarty_tpl);?>
 
-            <input type="submit" name="SetProductDisplayOption" value="Set" />
+            <input type="submit" class="btn btn-primary"  name="SetProductDisplayOption" value="Set" />
           </p>
         </td>
       </tr>
     </tbody>
   </table>
+  </div>
   <p>
     <font class="bold-text">Image name:</font> <?php echo $_smarty_tpl->tpl_vars['obj']->value->mProduct['image'];?>
 
     <input name="ImageUpload" type="file" value="Upload" />
-    <input type="submit" name="Upload" value="Upload" />
+    <input type="submit" class="btn btn-primary"  name="Upload" value="Upload" />
   </p>
   <?php if ($_smarty_tpl->tpl_vars['obj']->value->mProduct['image']) {?>
   <p>
@@ -166,7 +167,7 @@ echo smarty_function_load_presentation_object(array('filename'=>"admin_product_d
     <font class="bold-text">Image 2 name:</font> <?php echo $_smarty_tpl->tpl_vars['obj']->value->mProduct['image_2'];?>
 
     <input name="Image2Upload" type="file" value="Upload" />
-    <input type="submit" name="Upload" value="Upload" />
+    <input type="submit" class="btn btn-primary"  name="Upload" value="Upload" />
   </p>
   <?php if ($_smarty_tpl->tpl_vars['obj']->value->mProduct['image_2']) {?>
   <p>
@@ -180,7 +181,7 @@ echo smarty_function_load_presentation_object(array('filename'=>"admin_product_d
     <font class="bold-text">Thumbnail name:</font> <?php echo $_smarty_tpl->tpl_vars['obj']->value->mProduct['thumbnail'];?>
 
     <input name="ThumbnailUpload" type="file" value="Upload" />
-    <input type="submit" name="Upload" value="Upload" />
+    <input type="submit" class="btn btn-primary"  name="Upload" value="Upload" />
   </p>
   <?php if ($_smarty_tpl->tpl_vars['obj']->value->mProduct['thumbnail']) {?>
   <p>

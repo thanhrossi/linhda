@@ -14,7 +14,7 @@
       <input type="password" maxlength="50" name="password" size="22" />
     </p>
     <p>
-      <input type="submit" name="Login" value="Login" /> |
+      <input type="submit" name="Login" value="Login"  class="btn" /> |
       <a href="{$obj->mLinkToRegisterCustomer}">Bạn chưa có tài khoản?</a>
     </p>
   </form>
