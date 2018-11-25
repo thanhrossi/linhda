@@ -5,7 +5,7 @@
 
   # Specify the folder in which the application resides.
   # Use / if the application is in the root. 
-  RewriteBase /sushikai
+  RewriteBase /cocoshop
 
   # Redirect to correct domain to avoid canonicalization problems
   # RewriteCond %{HTTP_HOST} !^www\.example\.com

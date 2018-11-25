@@ -38,7 +38,7 @@ define('DB_PERSISTENCY', 'true');
 define('DB_SERVER', 'localhost');
 define('DB_USERNAME', 'root');
 define('DB_PASSWORD', '');
-define('DB_DATABASE', 'sushikai2');
+define('DB_DATABASE', 'cocoshop');
 define('PDO_DSN', 'mysql:host=' . DB_SERVER . ';dbname=' . DB_DATABASE);
 
 // Server HTTP port (can omit if the default 80 is used)
@@ -46,11 +46,11 @@ define('HTTP_SERVER_PORT', '80');
 /* Name of the virtual directory the site runs in, for example:
    '/tshirtshop/' if the site runs at http://www.example.com/tshirtshop/
    '/' if the site runs at http://www.example.com/ */
-define('VIRTUAL_LOCATION', '/sushikai/');
+define('VIRTUAL_LOCATION', '/cocoshop/');
 
 // Configure product lists display options
 define('SHORT_PRODUCT_DESCRIPTION_LENGTH', 150);
-define('PRODUCTS_PER_PAGE', 4);
+define('PRODUCTS_PER_PAGE', 10);
 
 /* Minimum word length for searches; this constant must be kept in sync
    with the ft_min_word_len MySQL variable */

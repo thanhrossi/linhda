@@ -6,13 +6,14 @@
 
 
 {if $obj->mProducts}
-<table class="product-list" border="0">
-  <tbody>
+
+<div class="product-list clearfix" border="0">
+  
   {section name=k loop=$obj->mProducts}
     {if $smarty.section.k.index % 2 == 0}
-    <tr>
+    <div class='product-row'>
     {/if}
-      <td valign="top">
+      <div class='product-col' valign="top">
         <h3 class="product-title">
           <a href="{$obj->mProducts[k].link_to_product}">
             {$obj->mProducts[k].name}
@@ -22,8 +23,8 @@
           {if $obj->mProducts[k].thumbnail neq ""}
           
             <a href="{$obj->mProducts[k].link_to_product}">
-              <span class="image-wrapper"><img src="{$obj->mProducts[k].thumbnail}"
-              alt="{$obj->mProducts[k].name}" />
+              <span class="image-wrapper"><span style="background-image: url('{$obj->mProducts[k].thumbnail}');" 
+              alt="{$obj->mProducts[k].name}" ></span>
               </span>
             </a>
           
@@ -37,7 +38,7 @@
             <span class="old-price">${$obj->mProducts[k].price}</span>
             
           {else}
-            <span class="price">{$obj->mProducts[k].price}</span>
+            <span class="price">${$obj->mProducts[k].price}</span>
           {/if}
         </p>
 
@@ -90,17 +91,19 @@
           <input type="submit" name="submit" value="Edit Product Details" class="btn edit-btn" />
         </form>
       {/if}
-      </td>
+      </div>
     {if $smarty.section.k.index % 2 != 0 && !$smarty.section.k.first ||
         $smarty.section.k.last}
-    </tr>
+    </div>
     {/if}
   {/section}
-  </tbody>
-</table>
+  <!-- {$smarty.section.k.index.total } -->
+  
+</div>
 
 
 {/if}
+
 {if count($obj->mProductListPages) > 0}
 <nav aria-label="Page navigation">
   <ul class="pagination">

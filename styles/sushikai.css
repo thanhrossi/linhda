@@ -86,6 +86,7 @@ div.yui-b div ul li a:hover {
 
 #contents {
   padding: 15px 0 20px;
+  max-width: 100%;
 }
 .title {
   border-left: 15px solid #f8694a;
@@ -99,6 +100,7 @@ div.yui-b div ul li a:hover {
 
 .product-list {
   width: 100%;
+  max-width: 840px;
 }
 .product-list tbody tr td {
   border: none;
@@ -119,6 +121,11 @@ div.yui-b div ul li a:hover {
 .product-title {
   border-left: 10px solid #f8694a;
   padding-left: 5px;
+  display: -webkit-box;
+  -webkit-box-orient: vertical;
+  -webkit-line-clamp: 2;
+  overflow: hidden;
+  height: 50px;
 }
 
 .section {
@@ -180,6 +187,7 @@ div.yui-b div form.add-product-form
 {
   margin: 0;
   padding: 0;
+  position: relative;
 }
 
 .add-product-form p
@@ -374,4 +382,49 @@ table.cart-summary td.cart-summary-subtotal {
   background-color: #797a7b;
   color: #fff !important;
   margin-bottom: 16px;
+}
+
+.l-sidebar.is_translated {
+  transform: translateY(-175px);
+}
+.image-wrapper {
+  position: relative;
+  display: block;
+  display: block;
+  position: relative;
+  height: 0;
+  width: 100%;
+  padding-bottom: 100%;
+}
+.image-wrapper > span {
+  display: block;
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  background: #fff no-repeat bottom center;
+  /* background-size: contain; */
+}
+.product-row {
+    width: 25%;
+    float: left;
+    padding: 0 16px  0 0;
+}
+.product-col {
+  position: relative;
+}
+.product-row .attributes {
+    position: absolute;
+    bottom: 50px;
+}
+.product-row:last-child {
+  width: 100%;
+}
+.product-row:last-child .product-col {
+  width: 25%;
+  float: left;
+}
+.product-col {
+  margin-bottom: 18px;
 }
